@@ -1,0 +1,134 @@
+/* General Layout */
+.container {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #e3f2fd 0%, #ffffff 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #00796b;
+}
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.login-btn {
+  background: #ff6f61;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+  padding: 70px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 15px;
+}
+.get-started {
+  background: #00796b;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Services Section */
+.services-section {
+  text-align: center;
+  padding: 50px;
+}
+.services-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  padding: 50px 0;
+}
+.service-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding: 20px;
+  position: relative;
+}
+.service-text-container {
+  max-width: 300px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: height 0.3s ease-in-out;
+}
+.service-text {
+  font-size: 16px;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+.service-image img {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+}
+
+/* Dotted Lines */
+.dotted-line {
+  position: absolute;
+  width: 250px;
+  height: 2px;
+  border-top: 2px dashed #00796b;
+}
+.final-straight-line {
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  border-left: 2px dashed #00796b;
+  top: calc(100% - 250px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Final Destination */
+.final-destination {
+  text-align: center;
+  margin-top: 120px;
+}
+.final-destination img {
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 20px;
+  margin-top: 50px;
+}

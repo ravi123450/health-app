@@ -1,0 +1,194 @@
+/* General Layout */
+.container {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  .login-btn {
+    background: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    text-align: center;
+    background: #f8c8dc;
+    padding: 50px;
+  }
+  .get-started {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  /* Services Section */
+  .services-section {
+    text-align: center;
+    padding: 50px;
+  }
+  .services-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding: 50px 0;
+  }
+  .service-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 20px;
+    position: relative;
+  }
+  .service-row.left {
+    flex-direction: row;
+  }
+  .service-row.right {
+    flex-direction: row-reverse;
+  }
+  .service-text {
+    font-size: 18px;
+    font-weight: bold;
+    width: 50%;
+    padding: 20px;
+    color: black;
+  }
+  .service-image {
+    width: 50%;
+    text-align: center;
+  }
+  .service-image img {
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+  }
+  
+  /* Dotted Diagonal Connector Lines */
+  .dotted-line {
+    position: absolute;
+    width: 250px;
+    height: 2px;
+    border-top: 2px dashed black;
+  }
+  .dotted-1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(35deg);
+  }
+  .dotted-2 {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%) rotate(-35deg);
+  }
+  .dotted-3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(35deg);
+  }
+  .dotted-4 {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%) rotate(-35deg);
+  }
+  .dotted-5 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(35deg);
+  }
+  .dotted-6 {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%) rotate(-35deg);
+  }
+  
+  /* Final Straight Line to Destination */
+  .final-straight-line {
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    border-left: 2px dashed black;
+    top: calc(100% - 250px); /* Aligning with Service 7 */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Final Destination Image */
+  .final-destination {
+    text-align: center;
+    margin-top: 120px;
+    position: relative;
+  }
+  .final-destination img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+  }
+  
+  /* Flag Section */
+  .flag-section {
+    margin-top: 50px;
+    text-align: center;
+    background: #ffd700;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .service-row {
+      flex-direction: column !important;
+      width: 90%;
+      text-align: center;
+    }
+    .service-text, .service-image {
+      width: 100%;
+    }
+    .dotted-line {
+      width: 150px;
+    }
+    .final-straight-line {
+      height: 80px;
+    }
+  }
+  

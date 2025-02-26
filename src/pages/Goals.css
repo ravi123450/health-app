@@ -1,0 +1,93 @@
+/* ✅ Goals Page Styling */
+.goals-container {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #002b36, #004d61);
+    color: white;
+  }
+  
+  /* ✅ Goal Boxes */
+  .goal-box {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* ✅ Macros Inside the Calorie Box */
+  .macros-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .macro-item {
+    margin: 5px 10px;
+    font-size: 14px;
+  }
+  
+  /* ✅ Water Glass Design */
+  .water-glass {
+    width: 120px;
+    height: 180px;
+    position: relative;
+    margin: 20px auto;
+    border: 5px solid #007BFF;
+    border-radius: 0 0 50px 50px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  
+  .water-fil {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(0, 123, 255, 0.6);;
+  }
+  
+  .wave {
+    position: absolute;
+    width: 200%;
+    height: 50px;
+    top: -10px;
+    left: -50%;
+    background: rgba(0, 123, 255, 0.6);
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: wave-move 10s infinite linear;
+  }
+  
+  @keyframes wave-move {
+    0% { transform: translateX(-50%) translateY(-50%); }
+    50% { transform: translateX(-25%) translateY(-5px); }
+    100% { transform: translateX(-50%) translateY(0); }
+  }
+  
+  /* ✅ Sleep Chart */
+  .sleep-chart {
+    height: 250px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  /* ✅ Buttons */
+  .track-btn {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .track-btn:hover {
+    background: #ff3b3b;
+  }
+  

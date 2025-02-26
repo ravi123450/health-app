@@ -1,0 +1,114 @@
+/* Main App Container */
+.app-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    font-size: 2.5em;
+    color: #6c757d;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    margin-bottom: 20px;
+  }
+  
+  .captured-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 200px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .webcam-container {
+    margin-bottom: 20px;
+  }
+  
+  .capture-btn {
+    background-color: #28a745;
+  }
+  
+  .capture-btn:hover {
+    background-color: #218838;
+  }
+  
+  .ingredients-container {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 2px solid #ddd;
+  }
+  
+  .ingredients-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .ingredient-item {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .nutrition-info {
+    margin-top: 30px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #495057;
+  }
+  
+  .nutrition-info p {
+    font-size: 1.1em;
+  }
+  
+  @media (max-width: 768px) {
+    .input-field, .button {
+      width: 100%;
+      font-size: 1em;
+    }
+  
+    .button {
+      padding: 12px;
+    }
+  
+    .captured-image {
+      max-width: 90%;
+    }
+  }
+  

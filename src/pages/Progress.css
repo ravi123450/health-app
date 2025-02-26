@@ -1,0 +1,185 @@
+/* ✅ General Layout */
+.progres-container {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #002b36, #004d61);
+    color: white;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;  /* ✅ Prevent content overflow */
+}
+
+/* ✅ Title Styling */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ✅ Separate Box for Each Section */
+.progress-box {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;  /* ✅ Smooth hover effect */
+}
+
+/* ✅ Add hover effect for better UI */
+.progress-box:hover {
+    transform: scale(1.02);
+}
+
+/* ✅ BMI Section */
+.bmi-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ✅ BMI Circle */
+.bmi-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* ✅ BMI Ranges */
+.bmi-ranges p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* ✅ Update Button */
+.update-btn {
+    background: #ff6b6b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.update-btn:hover {
+    background: #e04e4e;
+}
+
+/* ✅ Popup (Mobile Friendly) */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 400px;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* ✅ Popup Content */
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: black;
+}
+
+/* ✅ Input Fields */
+.popup-content input {
+    margin: 10px 0;
+    padding: 12px;
+    width: 75%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ✅ Buttons */
+.popup-content button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* ✅ Save Button */
+.popup-content button:first-of-type {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.popup-content button:first-of-type:hover {
+    background-color: #218838;
+}
+
+/* ✅ Close Button */
+.popup-content button:last-of-type {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.popup-content button:last-of-type:hover {
+    background-color: #c82333;
+}
+
+/* ✅ Weight Progress Graph */
+.progress-box canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* ✅ Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+    .progress-box {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .bmi-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .popup {
+        width: 75%;
+    }
+
+    .popup-content input {
+        font-size: 13px;
+    }
+
+    .update-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+}

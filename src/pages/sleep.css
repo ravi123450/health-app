@@ -1,0 +1,65 @@
+/* Main container */
+.sleep-tracker-container {
+    background: #f4f7fc;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .sleep-input {
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    width: 80px;
+    border: 2px solid #4B9CD3;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    background-color: #4B9CD3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+  }
+  
+  .submit-button:hover {
+    background-color: #358cbb;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .chart-container {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -1,0 +1,315 @@
+/* Universal reset to avoid any inherited margin or padding */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensuring no global styles interfere with the page */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #003135, #024950);
+    color: wheat;
+}
+
+/* Isolating the styles for the log-food-page component */
+.log-food-page {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+}
+
+/* General Box Styling */
+.log-food-page .box {
+    background-color: #ffffff;
+    color: black;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Total Calorie Intake Box */
+.log-food-page .total-calorie-intake {
+    background-color: #002d38;
+    color: white;
+    display: flex;
+    flex-direction: row; /* Side-by-side layout */
+    justify-content: flex-start; /* Align text and circle */
+    align-items: center; /* Align the items */
+    padding: 30px;
+    border-radius: 8px;
+    gap: 30px; /* Space between the circle and pie chart */
+    position: relative;
+    width: 90%; /* Reduced width */
+    max-width: 700px;
+    margin: 20px auto; /* Center alignment */
+}
+
+/* Total Calorie Intake Text Positioning */
+.log-food-page .total-calorie-intake h2 {
+    position: absolute; /* Position at the top-left corner */
+    top: 10px;
+    left: 20px; /* Ensure the text is aligned properly */
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Circle progress for total calorie intake */
+.log-food-page .circle-progress {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #d3d3d3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Circle representing the calories */
+.log-food-page .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    transition: width 0.3s, height 0.3s;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Text for "Logged" below the circle */
+.log-food-page .logged-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 35px; /* Space between the circle and text */
+}
+
+/* Pie Chart for Macro Nutrients */
+.log-food-page .macro-nutrients-pie-chart {
+    width: 275px;
+    height: 275px;
+    margin-top: 20px;
+}
+
+/* Suggestions container */
+.log-food-page .suggestions {
+    position: relative;
+    top: 0; /* Make sure suggestions appear under the search field */
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    z-index: 1000;
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+    color: black;
+}
+
+/* Styling for individual suggestion items */
+.log-food-page .suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.log-food-page .suggestions div:hover {
+    background: #f0f0f0;
+}
+
+/* Popup modal */
+.log-food-page .popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    max-width: 300px;
+    width: 80%;
+    color: black;
+}
+
+/* Ensure buttons are spaced properly */
+.log-food-page .popup button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.log-food-page .popup button:hover {
+    background-color: #45a049;
+}
+
+/* Additional reset styles only inside log-food-page */
+.log-food-page * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for meal sections (Breakfast, Lunch, Dinner) */
+.log-food-page .meal-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    background-color: #e8e8e8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.log-food-page .meal-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.log-food-page .meal-section .circle-progress {
+    margin: 20px 0;
+}
+
+/* Macro Nutrients Pie Chart */
+.log-food-page .macro-nutrients-chart {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+.log-food-page .macro-nutrients-chart canvas {
+    max-width: 100%;
+}
+
+/* Suggestion box when CSS is used */
+.log-food-page .suggestions {
+    position: relative;
+    top: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    z-index: 1000;
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+    color: black;
+}
+
+/* New Breakfast Nutrition Section */
+.log-food-page .breakfast-nutrition {
+    background-color: #002d38;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto; /* Center alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Breakfast Nutrition Text */
+.log-food-page .breakfast-nutrition h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Circle for breakfast calorie progress */
+.log-food-page .breakfast-nutrition .circle-progress {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #d3d3d3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;  /* Prevent overflow of inner circle */
+}
+
+.log-food-page .breakfast-nutrition .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    transition: width 0.3s, height 0.3s;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 100%;  /* Ensure the circle fits inside the progress circle */
+    height: 100%;  /* Ensure the circle fits inside the progress circle */
+}
+
+
+/* Logged Calories text for breakfast */
+.log-food-page .breakfast-nutrition .logged-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px; /* Space between the circle and text */
+}
+
+/* Pie chart for breakfast nutrition */
+.log-food-page .breakfast-nutrition .macro-nutrients-pie-chart {
+    width: 275px;
+    height: 275px;
+}
+
+/* CSS for mobile responsiveness */
+@media (max-width: 768px) {
+    .log-food-page .total-calorie-intake {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .log-food-page .circle-progress {
+        top: 46px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .log-food-page .circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .log-food-page .macro-nutrients-pie-chart {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .log-food-page .popup {
+        max-width: 250px;
+    }
+
+    .log-food-page .meal-section {
+        width: 90%;
+        padding: 15px;
+    }
+
+    /* Breakfast Nutrition Section for mobile */
+    .log-food-page .breakfast-nutrition {
+        width: 90%;
+        gap: 25px;
+    }
+}
